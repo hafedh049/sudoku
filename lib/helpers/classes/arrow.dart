@@ -4,7 +4,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:sudoku/helpers/utils.dart';
 
 class Arrow extends StatefulWidget {
-  const Arrow({super.key, required this.arrow});
+  const Arrow({super.key, required this.arrow, required this.callback});
   final IconData arrow;
   void Function() callback;
   @override
