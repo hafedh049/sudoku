@@ -15,10 +15,10 @@ class _ArrowState extends State<Arrow> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onLongPressDown: (LongPressDownDetails details) {
-        print("ld");
+        _gesture = true;
       },
       onLongPressUp: () {
-        print("lu");
+        _gesture = false;
       },
       onTapUp: (TapUpDetails details) {
         print("tu");
