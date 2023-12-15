@@ -11,7 +11,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  final List<String> _levels = <String>["Beginner", "Easy"];
+  final List<String> _levels = <String>["Beginner", "Easy", "Medium"];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
