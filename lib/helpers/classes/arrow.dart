@@ -13,15 +13,9 @@ class Arrow extends StatefulWidget {
 class _ArrowState extends State<Arrow> {
   @override
   Widget build(BuildContext context) {
-    return PrettyWaveButton(
-      onPressed: () {},
-      borderRadius: 50,
-      backgroundColor: transparent,
-      verticalPadding: 8,
-      horizontalPadding: 8,
-      duration: 200.ms,
-      waveLength: 16,
-      child: Icon(widget.arrow, size: 15, color: white),
+    return Container(
+        padding: const EdgeInsets.all(16),decoration: BoxDecoration(border: ),
+        child: Icon(widget.arrow, size: 15, color: white),
     );
   }
 }
