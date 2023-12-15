@@ -14,11 +14,17 @@ class _ArrowState extends State<Arrow> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onLongPressDown: (LongPressDownDetails details) {
-        print(1);
+        print("ld");
       },
-      onLongPressUp: () {},
-      onTapUp: (TapUpDetails details) {},
-      onTapDown: (TapDownDetails details) {},
+      onLongPressUp: () {
+        print("ld");
+      },
+      onTapUp: (TapUpDetails details) {
+        print("ld");
+      },
+      onTapDown: (TapDownDetails details) {
+        print("ld");
+      },
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(border: Border.all(width: .5, color: null), shape: BoxShape.circle),
