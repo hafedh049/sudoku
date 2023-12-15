@@ -66,13 +66,13 @@ class _HomeState extends State<Home> {
                               child: Arrow(
                                 arrow: FontAwesome.chevron_left,
                                 callback: () {
-                                  if (_levelsController.page!.toInt() == 4) {
-                                    _levelsController.previous(duration: 300.ms, curve: Curves.bounceIn);
-                                    if (_levelsController.page!.toInt() == 4) {
-                                      _(() => _hideRightArrow = true);
+                                  if (_levelsController.page!.toInt() == 0) {
+                                    _levelsController.previousPage(duration: 300.ms, curve: Curves.bounceIn);
+                                    if (_levelsController.page!.toInt() == 0) {
+                                      _(() => _hideLeftArrow = true);
                                     }
                                     if (_hideLeftArrow) {
-                                      _(() => _hideLeftArrow = false);
+                                      _(() => _hideRightArrow = false);
                                     }
                                   }
                                 },
