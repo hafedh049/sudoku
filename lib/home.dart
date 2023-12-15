@@ -15,6 +15,9 @@ class _HomeState extends State<Home> {
   final List<String> _levels = <String>["Beginner", "Easy", "Medium", "Hard", "Extreme"];
   final PageController _levelsController = PageController();
 
+  bool _hideLeftArrow = false;
+  bool _hideRightArrow = false;
+
   @override
   void dispose() {
     _levelsController.dispose();
