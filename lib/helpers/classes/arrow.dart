@@ -19,19 +19,19 @@ class _ArrowState extends State<Arrow> {
     return GestureDetector(
       onLongPressDown: (LongPressDownDetails details) {
         setState(() => _borderState = true);
-        setState(() => _gesture = true);
+        setState(() => _colorState = true);
       },
       onLongPressUp: () {
         setState(() => _borderState = false);
-        setState(() => _gesture = true);
+        setState(() => _colorState = true);
       },
       onTapUp: (TapUpDetails details) {
         setState(() => _borderState = false);
-        setState(() => _gesture = true);
+        setState(() => _colorState = true);
       },
       onTapDown: (TapDownDetails details) {
         setState(() => _borderState = true);
-        setState(() => _gesture = true);
+        setState(() => _colorState = true);
       },
       child: AnimatedContainer(
         duration: 300.ms,
