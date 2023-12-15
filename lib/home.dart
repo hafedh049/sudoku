@@ -36,7 +36,7 @@ class _HomeState extends State<Home> {
                   icon: const Icon(FontAwesome.palette, size: 20, color: gold),
                 ),
               ],
-            ),
+            ),cosnt Spacer(),
             Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
