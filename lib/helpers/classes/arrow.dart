@@ -21,10 +21,10 @@ class _ArrowState extends State<Arrow> {
         _gesture = false;
       },
       onTapUp: (TapUpDetails details) {
-        print("tu");
+        _gesture = false;
       },
       onTapDown: (TapDownDetails details) {
-        print("td");
+        _gesture = true;
       },
       child: Container(
         padding: const EdgeInsets.all(16),
