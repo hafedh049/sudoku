@@ -95,7 +95,16 @@ class _HomeState extends State<Home> {
                               opacity: _hideRightArrow ? 1 : 0,
                               child: Arrow(
                                 arrow: FontAwesome.chevron_right,
-                                callback: () {},
+                                callback: () {
+                                  if (_levelsController.page!.toInt() == 4) {
+                                    _(() => _hideLeftArrow = true);
+                                  } else {
+                                    _levelsController.previousPage(duration: 300.ms, curve: Curves.bounceIn);
+                                    if (_hideLeftArrow) {
+                                      _(() => _hideLeftArrow = false);
+                                    }
+                                  }
+                                },
                               ),
                             );
                           },
