@@ -19,7 +19,7 @@ class _HomeState extends State<Home> {
   bool _hideRightArrow = false;
 
   final GlobalKey<State> _leftArrowKey = GlobalKey<State>();
-  final GlobalKey<State> _leftArrowKey = GlobalKey<State>();
+  final GlobalKey<State> _rightArrowKey = GlobalKey<State>();
 
   @override
   void dispose() {
