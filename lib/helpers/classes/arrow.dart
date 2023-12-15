@@ -24,7 +24,7 @@ class _ArrowState extends State<Arrow> {
       },
       onLongPressUp: () async {
         setState(() => _borderState = false);
-        await Future.delayed(700.ms);
+        await Future.delayed(300.ms);
         setState(() => _colorState = false);
       },
       /*onTapUp: (TapUpDetails details) async {
