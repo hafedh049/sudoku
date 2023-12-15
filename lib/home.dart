@@ -82,6 +82,12 @@ class _HomeState extends State<Home> {
                           width: 100,
                           child: PageView.builder(
                             controller: _levelsController,
+                            onPageChanged: (index) {
+                              setState(() {
+                                _hideLeftArrow = index == 0;
+                                _hideRightArrow = index == 4; // Assuming there are 5 pages (0 to 4)
+                              });
+                            },
                             physics: const NeverScrollableScrollPhysics(),
                             itemCount: 5,
                             itemBuilder: (BuildContext context, int index) => Center(child: Text(_levels[index]).animate().fade()),
