@@ -20,14 +20,14 @@ class _ArrowState extends State<Arrow> {
         print("lu");
       },
       onTapUp: (TapUpDetails details) {
-        print("ld");
+        print("tu");
       },
       onTapDown: (TapDownDetails details) {
-        print("ld");
+        print("td");
       },
       child: Container(
         padding: const EdgeInsets.all(16),
-        decoration: BoxDecoration(border: Border.all(width: .5, color: null), shape: BoxShape.circle),
+        decoration: BoxDecoration(border: Border.all(width: .5, color: transparent), shape: BoxShape.circle),
         child: Icon(widget.arrow, size: 15, color: white),
       ),
     );
