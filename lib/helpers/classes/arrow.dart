@@ -21,11 +21,7 @@ class _ArrowState extends State<Arrow> {
       horizontalPadding: 8,
       duration: 200.ms,
       waveLength: 16,
-      child: Icon(
-        widget.arrow,
-        size: 15,
-        color: white,
-      ),
+      child: Icon(widget.arrow, size: 15, color: white),
     );
   }
 }
