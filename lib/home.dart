@@ -56,7 +56,7 @@ class _HomeState extends State<Home> {
                       children: <Widget>[
                         StatefulBuilder(
                           key: _leftArrowKey,
-                          builder: (BuildContext context, snapshot) {
+                          builder: (BuildContext context, void Function(void Function()) _) {
                             return Arrow(
                               arrow: FontAwesome.chevron_left,
                               callback: () {},
@@ -74,7 +74,7 @@ class _HomeState extends State<Home> {
                         ),
                         StatefulBuilder(
                           key: _rightArrowKey,
-                          builder: (context, snapshot) {
+                          builder: (BuildContext context, void Function(void Function()) _) {
                             return Arrow(
                               arrow: FontAwesome.chevron_right,
                               callback: () {},
