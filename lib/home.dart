@@ -76,7 +76,7 @@ class _HomeState extends State<Home> {
                           key: _rightArrowKey,
                           builder: (context, snapshot) {
                             return Arrow(
-                              arrow: FontAwesome.chevron_left,
+                              arrow: FontAwesome.chevron_right,
                               callback: () {},
                             );
                           },
