@@ -62,7 +62,7 @@ class _HomeState extends State<Home> {
                           builder: (BuildContext context, void Function(void Function()) _) {
                             return AnimatedOpacity(
                               duration: 300.ms,
-                              opacity: _hideLeftArrow ? 1 : 0,
+                              opacity: _hideLeftArrow ? 0 : 1,
                               child: Arrow(
                                 arrow: FontAwesome.chevron_left,
                                 callback: () {
