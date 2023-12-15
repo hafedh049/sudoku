@@ -19,28 +19,28 @@ class _ArrowState extends State<Arrow> {
     return GestureDetector(
       onLongPressDown: (LongPressDownDetails details) async {
         setState(() => _borderState = true);
-        await Future.delayed(100.ms);
+        await Future.delayed(300.ms);
         setState(() => _colorState = true);
       },
       onLongPressUp: () async {
         setState(() => _borderState = false);
-        await Future.delayed(100.ms);
+        await Future.delayed(300.ms);
         setState(() => _colorState = false);
       },
       onTapUp: (TapUpDetails details) async {
         setState(() => _borderState = false);
-        await Future.delayed(100.ms);
+        await Future.delayed(300.ms);
         setState(() => _colorState = false);
       },
       onTapDown: (TapDownDetails details) async {
         setState(() => _borderState = true);
-        await Future.delayed(100.ms);
+        await Future.delayed(300.ms);
         setState(() => _colorState = true);
       },
       child: AnimatedContainer(
         duration: 300.ms,
         padding: const EdgeInsets.all(16),
-        decoration: BoxDecoration(border: Border.all(width: .5, color: _borderState ? gold : transparent), shape: BoxShape.circle, color: _colorState ? gold : transparent),
+        decoration: BoxDecoration(border: Border.all(width: 1, color: _borderState ? gold : transparent), shape: BoxShape.circle, color: _colorState ? gold : transparent),
         child: Icon(widget.arrow, size: 15, color: _borderState ? dark : white),
       ),
     );
