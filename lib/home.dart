@@ -52,7 +52,7 @@ class _HomeState extends State<Home> {
                     height: 40,
                     child: Row(
                       children: <Widget>[
-                        Arrow(arrow: FontAwesome.chevron_left),
+                        const Arrow(arrow: FontAwesome.chevron_left),
                         SizedBox(
                           width: 100,
                           child: PageView.builder(
@@ -62,7 +62,7 @@ class _HomeState extends State<Home> {
                             itemBuilder: (BuildContext context, int index) => Center(child: Text(_levels[index])),
                           ),
                         ),
-                        Arrow(arrow: FontAwesome.chevron_right),
+                        const Arrow(arrow: FontAwesome.chevron_right),
                       ],
                     ),
                   ),
