@@ -14,7 +14,12 @@ class _HomeState extends State<Home> {
       body: Padding(
         padding: const EdgeInsets.all(24),
         child: Column(
-          children: <Widget>[const SizedBox(height: ,)],
+          children: <Widget>[
+            const SizedBox(height: 30),
+            Row(
+              children: <Widget>[],
+            )
+          ],
         ),
       ),
     );
