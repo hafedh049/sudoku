@@ -13,7 +13,13 @@ class _ArrowState extends State<Arrow> {
   @override
   Widget build(BuildContext context) {
     return PrettyWaveButton(
-      onPressed: () {},
+      onPressed: () {},borderRadius = s50,
+  Color backgroundColor = kBlack,
+  double verticalPadding = s14,
+  double horizontalPadding = s42,
+  Duration duration = duration1000,
+  Curve curve = Curves.easeInOut,
+  double waveLength = s6,
       child: Icon(
         widget.arrow,
         size: 15,
