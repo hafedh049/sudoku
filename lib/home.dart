@@ -48,6 +48,7 @@ class _HomeState extends State<Home> {
                         SizedBox(
                           width: 100,
                           child: PageView.builder(
+                            physics: const NeverScrollableScrollPhysics(),
                             itemCount: 5,
                             itemBuilder: (BuildContext context, int index) => Center(child: Text(_levels[index])),
                           ),
