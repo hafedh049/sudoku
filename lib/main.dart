@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:sudoku/home.dart';
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const Main());
 }
 
