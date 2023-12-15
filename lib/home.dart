@@ -50,7 +50,7 @@ class _HomeState extends State<Home> {
                   ),
                   const SizedBox(height: 30),
                   SizedBox(
-                    height: 40,
+                    height: 80,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
