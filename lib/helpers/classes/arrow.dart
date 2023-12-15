@@ -27,11 +27,13 @@ class _ArrowState extends State<Arrow> {
         setState(() => _colorState = false);
         await Future.delayed(300.ms);
         setState(() => _borderState = false);
+        widget.callback();
       },
       onTapUp: (TapUpDetails details) async {
         setState(() => _colorState = false);
         await Future.delayed(700.ms);
         setState(() => _borderState = false);
+        widget.callback();
       },
       onTapDown: (TapDownDetails details) async {
         setState(() => _colorState = true);
