@@ -54,9 +54,14 @@ class _HomeState extends State<Home> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Arrow(
-                          arrow: FontAwesome.chevron_left,
-                          callback: () {},
+                        StatefulBuilder(
+                          key: _leftArrowKey,
+                          builder: (context, snapshot) {
+                            return Arrow(
+                              arrow: FontAwesome.chevron_left,
+                              callback: () {},
+                            );
+                          },
                         ),
                         SizedBox(
                           width: 100,
