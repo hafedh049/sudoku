@@ -35,7 +35,7 @@ class _HomeState extends State<Home> {
                   Container(
                     decoration: const BoxDecoration(shape: BoxShape.circle, color: gold),
                     padding: const EdgeInsets.all(16),
-                    child: const Icon(FontAwesome.hashtag, size: 64, color: gold),
+                    child: const Icon(FontAwesome.hashtag, size: 64, color: dark),
                   ),
                 ],
               ),
