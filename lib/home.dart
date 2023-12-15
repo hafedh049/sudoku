@@ -71,7 +71,7 @@ class _HomeState extends State<Home> {
                                     if (_levelsController.page!.toInt() == 0) {
                                       _(() => _hideLeftArrow = true);
                                     }
-                                    if (_hideLeftArrow) {
+                                    if (_hideRightArrow) {
                                       _(() => _hideRightArrow = false);
                                     }
                                   }
