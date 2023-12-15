@@ -13,7 +13,9 @@ class _ArrowState extends State<Arrow> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onLongPressDown: (LongPressDownDetails details) {},
+      onLongPressDown: (LongPressDownDetails details) {
+        print(1);
+      },
       onLongPressUp: () {},
       onTapUp: (TapUpDetails details) {},
       onTapDown: (TapDownDetails details) {},
