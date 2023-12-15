@@ -73,7 +73,7 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         StatefulBuilder(
-                          key: _leftArrowKey,
+                          key: _rightArrowKey,
                           builder: (context, snapshot) {
                             return Arrow(
                               arrow: FontAwesome.chevron_left,
