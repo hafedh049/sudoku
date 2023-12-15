@@ -10,6 +10,9 @@ class SudokuGrid extends StatefulWidget {
 class _SudokuGridState extends State<SudokuGrid> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: );
+    return Scaffold(
+        body: Column(
+      children: <Widget>[],
+    ));
   }
 }
