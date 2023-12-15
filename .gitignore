@@ -4,6 +4,7 @@
 .dart_tool/
 .packages
 build/
+android/
 # If you're building an application, you may want to check-in your pubspec.lock
 pubspec.lock
 
@@ -13,7 +14,7 @@ doc/api/
 auto_commit.py
 # dotenv environment variables file
 .env*
-android/
+
 # Avoid committing generated Javascript files:
 *.dart.js
 *.info.json      # Produced by the --dump-info flag.
