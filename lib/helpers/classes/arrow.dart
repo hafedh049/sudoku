@@ -19,7 +19,6 @@ class _ArrowState extends State<Arrow> {
     return GestureDetector(
       onLongPressDown: (LongPressDownDetails details) async {
         setState(() => _colorState = true);
-
         await Future.delayed(300.ms);
         setState(() => _borderState = true);
       },
