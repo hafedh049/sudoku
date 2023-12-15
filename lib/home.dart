@@ -14,6 +14,8 @@ class _HomeState extends State<Home> {
   final List<String> _levels = <String>["Beginner", "Easy", "Medium", "Hard", "Extreme"];
   final PageController _levelsController = PageController();
 
+  final GlobalKey<State> _leftArrowKey = GlobalKey<State>();
+
   @override
   void dispose() {
     _levelsController.dispose();
