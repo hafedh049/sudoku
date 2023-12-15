@@ -11,10 +11,12 @@ class Arrow extends StatefulWidget {
 class _ArrowState extends State<Arrow> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(border: Border.all(width: .5, color: null), shape: BoxShape.circle),
-      child: Icon(widget.arrow, size: 15, color: white),
+    return GestureDetector(
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(border: Border.all(width: .5, color: null), shape: BoxShape.circle),
+        child: Icon(widget.arrow, size: 15, color: white),
+      ),
     );
   }
 }
