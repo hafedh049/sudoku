@@ -53,6 +53,16 @@ class _HomeState extends State<Home> {
                     child: Row(
                       children: <Widget>[
                         const Arrow(arrow: FontAwesome.chevron_left),
+                        SizedBox(
+                          width: 100,
+                          child: PageView.builder(
+                            controller: _levelsController,
+                            physics: const NeverScrollableScrollPhysics(),
+                            itemCount: 5,
+                            itemBuilder: (BuildContext context, int index) => Center(child: Text(_levels[index])),
+                          ),
+                        ),
+                        const Arrow(arrow: FontAwesome.chevron_right),
                       ],
                     ),
                   ),
