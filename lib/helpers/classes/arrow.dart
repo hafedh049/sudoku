@@ -12,7 +12,7 @@ class Arrow extends StatefulWidget {
 
 class _ArrowState extends State<Arrow> {
   bool _borderState = false;
-  bool _borderState = false;
+  bool _colorState = false;
 
   @override
   Widget build(BuildContext context) {
