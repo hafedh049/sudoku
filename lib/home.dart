@@ -11,8 +11,11 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: <Widget>[],
+      body: Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          children: <Widget>[const SizedBox(height: ,)],
+        ),
       ),
     );
   }
