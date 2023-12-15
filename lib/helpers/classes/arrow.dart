@@ -25,19 +25,16 @@ class _ArrowState extends State<Arrow> {
       onLongPressUp: () async {
         setState(() => _borderState = false);
         await Future.delayed(100.ms);
-
         setState(() => _colorState = true);
       },
       onTapUp: (TapUpDetails details) async {
         setState(() => _borderState = false);
         await Future.delayed(100.ms);
-
         setState(() => _colorState = true);
       },
       onTapDown: (TapDownDetails details) async {
         setState(() => _borderState = true);
         await Future.delayed(100.ms);
-
         setState(() => _colorState = true);
       },
       child: AnimatedContainer(
