@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
+import 'package:sudoku/helpers/classes/arrow.dart';
 import 'package:sudoku/helpers/utils.dart';
 
 class Home extends StatefulWidget {
@@ -42,8 +43,8 @@ class _HomeState extends State<Home> {
                     height: 40,
                     child: Row(
                       children: <Widget>[
-
-                        PageView.builder(itemCount: 5,itemBuilder: (BuildContext context,int index) => ,)],
+Arrow(arrow: FontAwesome.chevron_left),
+                        PageView.builder(itemCount: 5,itemBuilder: (BuildContext context,int index) => ,),Arrow(arrow: FontAwesome.chevron_left),],
                     ),
                   ),
                 ],
