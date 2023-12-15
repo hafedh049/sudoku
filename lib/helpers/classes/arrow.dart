@@ -18,14 +18,15 @@ class _ArrowState extends State<Arrow> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onLongPressDown: (LongPressDownDetails details) async {
-        setState(() => _borderState = true);
-        await Future.delayed(300.ms);
         setState(() => _colorState = true);
+
+        await Future.delayed(300.ms);
+        setState(() => _borderState = true);
       },
       onLongPressUp: () async {
-        setState(() => _borderState = false);
-        await Future.delayed(300.ms);
         setState(() => _colorState = false);
+        await Future.delayed(300.ms);
+        setState(() => _borderState = false);
       },
       onTapUp: (TapUpDetails details) async {
         setState(() => _colorState = false);
