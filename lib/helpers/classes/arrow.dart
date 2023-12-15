@@ -10,6 +10,7 @@ class Arrow extends StatefulWidget {
 }
 
 class _ArrowState extends State<Arrow> {
+  bool _gesture = false;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
