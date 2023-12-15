@@ -17,7 +17,7 @@ class _HomeState extends State<Home> {
           children: <Widget>[
             const SizedBox(height: 30),
             Row(
-              children: <Widget>[],
+              children: <Widget>[const Spacer(), IconButton(onPressed: () {}, icon: icon)],
             ),
           ],
         ),
