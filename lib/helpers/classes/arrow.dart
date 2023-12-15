@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pretty_animated_buttons/widgets/pretty_wave_button.dart';
+import 'package:sudoku/helpers/utils.dart';
 
 class Arrow extends StatefulWidget {
   const Arrow({super.key, required this.arrow});
@@ -11,6 +12,13 @@ class Arrow extends StatefulWidget {
 class _ArrowState extends State<Arrow> {
   @override
   Widget build(BuildContext context) {
-    return PrettyWaveButton(onPressed: () {}, child: Icon(widget.arrow, size: 15, color: white));
+    return PrettyWaveButton(
+      onPressed: () {},
+      child: Icon(
+        widget.arrow,
+        size: 15,
+        color: white,
+      ),
+    );
   }
 }
