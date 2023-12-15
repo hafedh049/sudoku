@@ -65,8 +65,9 @@ class _HomeState extends State<Home> {
                               arrow: FontAwesome.chevron_left,
                               callback: () {
                                 if (_levelsController.page!.toInt() == 0) {
-                                } else {}
-                                _levelsController.nextPage(duration: 300.ms, curve: Curves.bounceIn);
+                                } else {
+                                  _levelsController.nextPage(duration: 300.ms, curve: Curves.bounceIn);
+                                }
                               },
                             );
                           },
