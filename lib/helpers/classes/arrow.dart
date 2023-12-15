@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:sudoku/helpers/utils.dart';
 
 class Arrow extends StatefulWidget {
@@ -26,7 +27,7 @@ class _ArrowState extends State<Arrow> {
       onTapDown: (TapDownDetails details) {
         _gesture = true;
       },
-      child: Container(
+      child: AnimatedContainer(duration: 300.ms,
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(border: Border.all(width: .5, color:        _gesture ? transparent), shape: BoxShape.circle),
         child: Icon(widget.arrow, size: 15, color: white),
