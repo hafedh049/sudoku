@@ -95,14 +95,12 @@ class _HomeState extends State<Home> {
                               child: Arrow(
                                 arrow: FontAwesome.chevron_right,
                                 callback: () {
+                                  _levelsController.nextPage(duration: 300.ms, curve: Curves.bounceIn);
                                   if (_levelsController.page!.toInt() == 4) {
-                                    _levelsController.nextPage(duration: 300.ms, curve: Curves.bounceIn);
-                                    if (_levelsController.page!.toInt() == 4) {
-                                      _(() => _hideRightArrow = true);
-                                    }
-                                    if (_hideLeftArrow) {
-                                      _(() => _hideLeftArrow = false);
-                                    }
+                                    _(() => _hideRightArrow = true);
+                                  }
+                                  if (_hideLeftArrow) {
+                                    _(() => _hideLeftArrow = false);
                                   }
                                 },
                               ),
