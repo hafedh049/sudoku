@@ -54,8 +54,9 @@ class _HomeState extends State<Home> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        const Arrow(
+                        Arrow(
                           arrow: FontAwesome.chevron_left,
+                          callback: () {},
                         ),
                         SizedBox(
                           width: 100,
