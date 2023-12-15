@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:sudoku/helpers/classes/arrow.dart';
 import 'package:sudoku/helpers/utils.dart';
@@ -72,7 +73,7 @@ class _HomeState extends State<Home> {
                             controller: _levelsController,
                             physics: const NeverScrollableScrollPhysics(),
                             itemCount: 5,
-                            itemBuilder: (BuildContext context, int index) => Center(child: Text(_levels[index])),
+                            itemBuilder: (BuildContext context, int index) => Center(child: Text(_levels[index]).animate().fade()),
                           ),
                         ),
                         StatefulBuilder(
