@@ -27,9 +27,11 @@ class _ArrowState extends State<Arrow> {
       onTapDown: (TapDownDetails details) {
         _gesture = true;
       },
-      child: AnimatedContainer(duration: 300.ms,curve: Curves.easeInBack,
+      child: AnimatedContainer(
+        duration: 300.ms,
+        curve: Curves.easeInBack,
         padding: const EdgeInsets.all(16),
-        decoration: BoxDecoration(border: Border.all(width: .5, color:        _gesture ? transparent), shape: BoxShape.circle),
+        decoration: BoxDecoration(border: Border.all(width: .5, color: _gesture ? gold : transparent), shape: BoxShape.circle),
         child: Icon(widget.arrow, size: 15, color: white),
       ),
     );
