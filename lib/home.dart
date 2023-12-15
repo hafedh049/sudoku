@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
+import 'package:sudoku/helpers/utils.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -18,7 +19,13 @@ class _HomeState extends State<Home> {
           children: <Widget>[
             const SizedBox(height: 30),
             Row(
-              children: <Widget>[const Spacer(), IconButton(onPressed: () {}, icon: Icon(FontAwesome.palette,size: 20,color: ),),],
+              children: <Widget>[
+                const Spacer(),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(FontAwesome.palette, size: 20, color: gold),
+                ),
+              ],
             ),
           ],
         ),
