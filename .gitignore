@@ -13,7 +13,7 @@ doc/api/
 auto_commit.py
 # dotenv environment variables file
 .env*
-
+android
 # Avoid committing generated Javascript files:
 *.dart.js
 *.info.json      # Produced by the --dump-info flag.
