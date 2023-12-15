@@ -49,9 +49,7 @@ class _HomeState extends State<Home> {
                           width: 100,
                           child: PageView.builder(
                             itemCount: 5,
-                            itemBuilder: (BuildContext context, int index) => Center(
-                              child: Text(data),
-                            ),
+                            itemBuilder: (BuildContext context, int index) => Center(child: Text(_levels[index])),
                           ),
                         ),
                         Arrow(arrow: FontAwesome.chevron_right),
