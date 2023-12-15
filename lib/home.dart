@@ -64,7 +64,8 @@ class _HomeState extends State<Home> {
                             return Arrow(
                               arrow: FontAwesome.chevron_left,
                               callback: () {
-                                if (_levelsController.page!.toInt() == 0) {_levelsController.page!}
+                                if (_levelsController.page!.toInt() == 0) {
+                                } else {}
                                 _levelsController.nextPage(duration: 300.ms, curve: Curves.bounceIn);
                               },
                             );
