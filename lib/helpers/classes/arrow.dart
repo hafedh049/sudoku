@@ -26,7 +26,7 @@ class _ArrowState extends State<Arrow> {
         await Future.delayed(700.ms);
         setState(() => _colorState = false);
       },
-      onTapCancel: (details) async {
+      onTapCancel: () async {
         setState(() => _borderState = false);
         await Future.delayed(700.ms);
         setState(() => _colorState = false);
