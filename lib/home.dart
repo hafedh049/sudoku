@@ -33,9 +33,9 @@ class _HomeState extends State<Home> {
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   Container(
-                    decoration: BoxDecoration(shape: BoxShape.circle, color: gold),
+                    decoration: const BoxDecoration(shape: BoxShape.circle, color: gold),
                     padding: const EdgeInsets.all(16),
-                    child: const Icon(FontAwesome.palette, size: 20, color: gold),
+                    child: const Icon(FontAwesome.hashtag, size: 64, color: gold),
                   ),
                 ],
               ),
