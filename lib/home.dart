@@ -86,9 +86,13 @@ class _HomeState extends State<Home> {
                         ),
                         StatefulBuilder(
                           builder: (BuildContext context, void Function(void Function()) _) {
-                            return Arrow(
-                              arrow: FontAwesome.chevron_right,
-                              callback: () {},
+                            return AnimatedOpacity(
+                              duration: 300.ms,
+                              opacity: _hideRightArrow ? 1 : 0,
+                              child: Arrow(
+                                arrow: FontAwesome.chevron_right,
+                                callback: () {},
+                              ),
                             );
                           },
                         ),
