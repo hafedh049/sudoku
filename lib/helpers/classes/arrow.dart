@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-import 'package:pretty_animated_buttons/widgets/pretty_wave_button.dart';
 import 'package:sudoku/helpers/utils.dart';
 
 class Arrow extends StatefulWidget {
