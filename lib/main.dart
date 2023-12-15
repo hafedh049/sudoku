@@ -10,6 +10,9 @@ class Main extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(debugShowCheckedModeBanner: false,home: ,);
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: const Home(),
+    );
   }
 }
