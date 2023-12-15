@@ -3,15 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:sudoku/helpers/utils.dart';
 
-class Arrow extends StatefulWidget {
-  const Arrow({super.key, required this.arrow, required this.callback});
-  final IconData arrow;
+class Iconed extends StatefulWidget {
+  const Iconed({super.key, required this.icon, required this.callback, this.iconSize = 15});
+  final IconData icon;
   final void Function() callback;
+  final double iconSize;
   @override
-  State<Arrow> createState() => _ArrowState();
+  State<Iconed> createState() => _IconedState();
 }
 
-class _ArrowState extends State<Arrow> {
+class _IconedState extends State<Iconed> {
   bool _borderState = false;
   bool _colorState = false;
 
@@ -31,7 +32,7 @@ class _ArrowState extends State<Arrow> {
       },
       onTapUp: (TapUpDetails details) async {
         setState(() => _colorState = false);
-        await Future.delayed(700.ms);
+        await Future.delayed(500.ms);
         setState(() => _borderState = false);
         widget.callback();
       },
@@ -44,7 +45,7 @@ class _ArrowState extends State<Arrow> {
         duration: 500.ms,
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(border: Border.all(width: 1, color: _borderState ? gold : transparent), shape: BoxShape.circle, color: _colorState ? gold : transparent),
-        child: Icon(widget.arrow, size: 15, color: _borderState ? dark : white),
+        child: Icon(widget.icon, size: widget.iconSize, color: _colorState ? dark : white),
       ),
     );
   }

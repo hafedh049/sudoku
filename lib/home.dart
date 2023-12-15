@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:icons_plus/icons_plus.dart';
-import 'package:sudoku/helpers/classes/arrow.dart';
+import 'package:sudoku/helpers/classes/button.dart';
+import 'package:sudoku/helpers/classes/icon.dart';
 import 'package:sudoku/helpers/utils.dart';
 
 class Home extends StatefulWidget {
@@ -31,7 +32,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(24),
+        padding: const EdgeInsets.all(36),
         child: Column(
           children: <Widget>[
             const SizedBox(height: 30),
@@ -40,7 +41,7 @@ class _HomeState extends State<Home> {
                 const Spacer(),
                 IconButton(
                   onPressed: () {},
-                  icon: const Icon(FontAwesome.palette, size: 20, color: gold),
+                  icon: const Icon(FontAwesome.palette, size: 25, color: gold),
                 ),
               ],
             ),
@@ -50,10 +51,17 @@ class _HomeState extends State<Home> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  Container(
-                    decoration: const BoxDecoration(shape: BoxShape.circle, color: gold),
-                    padding: const EdgeInsets.all(16),
-                    child: const Icon(Bootstrap.hash, size: 150, color: dark),
+                  StatefulBuilder(
+                    builder: (BuildContext context, void Function(void Function()) _) {
+                      return GestureDetector(
+                        onTap: () => _(() {}),
+                        child: Container(
+                          decoration: const BoxDecoration(shape: BoxShape.circle, color: gold),
+                          padding: const EdgeInsets.all(16),
+                          child: const Icon(Bootstrap.hash, size: 150, color: dark),
+                        ).animate().shakeX(),
+                      );
+                    },
                   ),
                   const SizedBox(height: 30),
                   SizedBox(
@@ -62,22 +70,12 @@ class _HomeState extends State<Home> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         StatefulBuilder(
+                          key: _leftArrowKey,
                           builder: (BuildContext context, void Function(void Function()) _) {
                             return AnimatedOpacity(
                               duration: 300.ms,
                               opacity: _hideLeftArrow ? 0 : 1,
-                              child: Arrow(
-                                arrow: FontAwesome.chevron_left,
-                                callback: () {
-                                  _levelsController.previousPage(duration: 300.ms, curve: Curves.bounceIn);
-                                  if (_levelsController.page!.toInt() == 0) {
-                                    _(() => _hideLeftArrow = true);
-                                  }
-                                  if (_hideRightArrow) {
-                                    _(() => _hideRightArrow = false);
-                                  }
-                                },
-                              ),
+                              child: Iconed(icon: FontAwesome.chevron_left, callback: () => _levelsController.previousPage(duration: 300.ms, curve: Curves.bounceIn)),
                             );
                           },
                         ),
@@ -85,11 +83,9 @@ class _HomeState extends State<Home> {
                           width: 100,
                           child: PageView.builder(
                             controller: _levelsController,
-                            onPageChanged: (index) {
-                              (() {
-                                _hideLeftArrow = index == 0;
-                                _hideRightArrow = index == 4; // Assuming there are 5 pages (0 to 4)
-                              });
+                            onPageChanged: (int index) {
+                              _leftArrowKey.currentState!.setState(() => _hideLeftArrow = index == 0);
+                              _rightArrowKey.currentState!.setState(() => _hideRightArrow = index == 4);
                             },
                             physics: const NeverScrollableScrollPhysics(),
                             itemCount: 5,
@@ -97,29 +93,30 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         StatefulBuilder(
+                          key: _rightArrowKey,
                           builder: (BuildContext context, void Function(void Function()) _) {
                             return AnimatedOpacity(
                               duration: 300.ms,
                               opacity: _hideRightArrow ? 0 : 1,
-                              child: Arrow(
-                                arrow: FontAwesome.chevron_right,
-                                callback: () {
-                                  _levelsController.nextPage(duration: 300.ms, curve: Curves.bounceIn);
-                                  if (_levelsController.page!.toInt() == 4) {
-                                    _(() => _hideRightArrow = true);
-                                  }
-                                  if (_hideLeftArrow) {
-                                    _(() => _hideLeftArrow = false);
-                                  }
-                                },
-                              ),
+                              child: Iconed(icon: FontAwesome.chevron_right, callback: () => _levelsController.nextPage(duration: 300.ms, curve: Curves.bounceIn)),
                             );
                           },
                         ),
                       ],
                     ),
                   ),
-                  Container(),
+                  Buttoned(text: "New Game", callback: () {}),
+                  const SizedBox(height: 20),
+                  Buttoned(text: "Resume", callback: () {}),
+                  const SizedBox(height: 30),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      Iconed(icon: FontAwesome.gear, callback: () {}, iconSize: 20),
+                      Iconed(icon: FontAwesome.list_ul, callback: () {}, iconSize: 20),
+                      Iconed(icon: FontAwesome.info, callback: () {}, iconSize: 20),
+                    ],
+                  )
                 ],
               ),
             ),

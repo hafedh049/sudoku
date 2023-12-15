@@ -11,8 +11,12 @@ class _SudokuGridState extends State<SudokuGrid> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(
-      children: <Widget>[],
-    ));
+      body: Column(
+        children: <Widget>[
+          const Spacer(),
+          const Spacer(),
+        ],
+      ),
+    );
   }
 }
