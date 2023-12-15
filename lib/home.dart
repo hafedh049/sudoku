@@ -67,7 +67,7 @@ class _HomeState extends State<Home> {
                                 arrow: FontAwesome.chevron_left,
                                 callback: () {
                                   if (_levelsController.page!.toInt() == 4) {
-                                    _levelsController.nextPage(duration: 300.ms, curve: Curves.bounceIn);
+                                    _levelsController.previous(duration: 300.ms, curve: Curves.bounceIn);
                                     if (_levelsController.page!.toInt() == 4) {
                                       _(() => _hideRightArrow = true);
                                     }
