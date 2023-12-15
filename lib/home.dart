@@ -18,7 +18,7 @@ class _HomeState extends State<Home> {
             const SizedBox(height: 30),
             Row(
               children: <Widget>[],
-            )
+            ),
           ],
         ),
       ),
