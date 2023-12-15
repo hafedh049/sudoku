@@ -6,6 +6,7 @@ import 'package:sudoku/helpers/utils.dart';
 class Arrow extends StatefulWidget {
   const Arrow({super.key, required this.arrow});
   final IconData arrow;
+  void Function()
   @override
   State<Arrow> createState() => _ArrowState();
 }
