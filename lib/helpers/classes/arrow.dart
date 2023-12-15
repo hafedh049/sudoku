@@ -17,7 +17,7 @@ class _ArrowState extends State<Arrow> {
         print("ld");
       },
       onLongPressUp: () {
-        print("ld");
+        print("lu");
       },
       onTapUp: (TapUpDetails details) {
         print("ld");
