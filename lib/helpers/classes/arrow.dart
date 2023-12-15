@@ -19,13 +19,13 @@ class _ArrowState extends State<Arrow> {
         setState(() => _gesture = true);
       },
       onLongPressUp: () {
-        _gesture = false;
+        setState(() => _gesture = false);
       },
       onTapUp: (TapUpDetails details) {
-        _gesture = false;
+        setState(() => _gesture = false);
       },
       onTapDown: (TapDownDetails details) {
-        _gesture = true;
+        setState(() => _gesture = true);
       },
       child: AnimatedContainer(
         duration: 300.ms,
