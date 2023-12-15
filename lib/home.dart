@@ -38,7 +38,12 @@ class _HomeState extends State<Home> {
                     child: const Icon(FontAwesome.hashtag, size: 64, color: dark),
                   ),
                   const SizedBox(height: 30),
-                  SizedBox(height: 40,child: PageView.builder(itemCount: 5,itemBuilder: (BuildContext context,int index) => ,),),
+                  SizedBox(
+                    height: 40,
+                    child: Row(
+                      children: <Widget>[ PageView.builder(itemCount: 5,itemBuilder: (BuildContext context,int index) => ,)],
+                    ),
+                  ),
                 ],
               ),
             ),
