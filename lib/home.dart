@@ -41,7 +41,9 @@ class _HomeState extends State<Home> {
                   SizedBox(
                     height: 40,
                     child: Row(
-                      children: <Widget>[ PageView.builder(itemCount: 5,itemBuilder: (BuildContext context,int index) => ,)],
+                      children: <Widget>[
+
+                        PageView.builder(itemCount: 5,itemBuilder: (BuildContext context,int index) => ,)],
                     ),
                   ),
                 ],
