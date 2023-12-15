@@ -15,6 +15,7 @@ class _HomeState extends State<Home> {
   final PageController _levelsController = PageController();
 
   final GlobalKey<State> _leftArrowKey = GlobalKey<State>();
+  final GlobalKey<State> _rightArrowKey = GlobalKey<State>();
 
   @override
   void dispose() {
