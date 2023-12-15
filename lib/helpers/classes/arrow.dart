@@ -14,6 +14,8 @@ class _ArrowState extends State<Arrow> {
     return GestureDetector(
       onLongPressDown: (details) {},
       onLongPressUp: () {},
+      onTapUp: (details) {},
+      onTapDown: ,
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(border: Border.all(width: .5, color: null), shape: BoxShape.circle),
