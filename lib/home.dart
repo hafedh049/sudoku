@@ -43,8 +43,15 @@ class _HomeState extends State<Home> {
                     height: 40,
                     child: Row(
                       children: <Widget>[
-Arrow(arrow: FontAwesome.chevron_left),
-                        PageView.builder(itemCount: 5,itemBuilder: (BuildContext context,int index) => ,),Arrow(arrow: FontAwesome.chevron_right),],
+                        Arrow(arrow: FontAwesome.chevron_left),
+                        PageView.builder(
+                          itemCount: 5,
+                          itemBuilder: (BuildContext context, int index) => Center(
+                            child: Text(data),
+                          ),
+                        ),
+                        Arrow(arrow: FontAwesome.chevron_right),
+                      ],
                     ),
                   ),
                 ],
