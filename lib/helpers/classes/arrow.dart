@@ -15,7 +15,7 @@ class _ArrowState extends State<Arrow> {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(border: Border.all(width: .5)),
+      decoration: BoxDecoration(border: Border.all(width: .5, color: null), shape: BoxShape.circle),
       child: Icon(widget.arrow, size: 15, color: white),
     );
   }
