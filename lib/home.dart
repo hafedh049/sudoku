@@ -51,6 +51,7 @@ class _HomeState extends State<Home> {
                   SizedBox(
                     height: 40,
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         const Arrow(arrow: FontAwesome.chevron_left),
                         SizedBox(
