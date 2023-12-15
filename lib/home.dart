@@ -72,9 +72,14 @@ class _HomeState extends State<Home> {
                             itemBuilder: (BuildContext context, int index) => Center(child: Text(_levels[index])),
                           ),
                         ),
-                        Arrow(
-                          arrow: FontAwesome.chevron_right,
-                          callback: () {},
+                        StatefulBuilder(
+                          key: _leftArrowKey,
+                          builder: (context, snapshot) {
+                            return Arrow(
+                              arrow: FontAwesome.chevron_left,
+                              callback: () {},
+                            );
+                          },
                         ),
                       ],
                     ),
