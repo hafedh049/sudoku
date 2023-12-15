@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:sudoku/helpers/utils.dart';
@@ -16,17 +17,17 @@ class _ArrowState extends State<Arrow> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onLongPressStart: (LongPressStartDetails details) async {
+      onLongPressDown: (LongPressDownDetails details) async {
         setState(() => _borderState = true);
         await Future.delayed(300.ms);
         setState(() => _colorState = true);
       },
-      onLongPressEnd: (LongPressEndDetails details) async {
+      onLongPressUp: () async {
         setState(() => _borderState = false);
         await Future.delayed(700.ms);
         setState(() => _colorState = false);
       },
-      onTapCancel: () async {
+      onTapUp: (TapUpDetails details) async {
         setState(() => _borderState = false);
         await Future.delayed(700.ms);
         setState(() => _colorState = false);
