@@ -100,11 +100,9 @@ class _HomeState extends State<Home> {
                                   print(_levelsController.page!.toInt());
 
                                   if (_levelsController.page!.toInt() == 4) {
-                                    _(() => _hideRightArrow = true);
-
                                     _levelsController.nextPage(duration: 300.ms, curve: Curves.bounceIn);
                                     if (_hideRightArrow) {
-                                      _(() => _hideRightArrow = false);
+                                      _(() => _hideRightArrow = true);
                                     }
                                   }
                                 },
