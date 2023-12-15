@@ -63,7 +63,9 @@ class _HomeState extends State<Home> {
                           builder: (BuildContext context, void Function(void Function()) _) {
                             return Arrow(
                               arrow: FontAwesome.chevron_left,
-                              callback: () {},
+                              callback: () {
+                                _levelsController.nextPage(duration: 300.ms, curve: Curves.bounceIn);
+                              },
                             );
                           },
                         ),
