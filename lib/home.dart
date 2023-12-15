@@ -12,6 +12,14 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   final List<String> _levels = <String>["Beginner", "Easy", "Medium", "Hard", "Extreme"];
+  final PageController _levelsController = PageController();
+
+  @override
+  void dispose() {
+    _levelsController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,6 +56,7 @@ class _HomeState extends State<Home> {
                         SizedBox(
                           width: 100,
                           child: PageView.builder(
+                            controller: _levelsController,
                             physics: const NeverScrollableScrollPhysics(),
                             itemCount: 5,
                             itemBuilder: (BuildContext context, int index) => Center(child: Text(_levels[index])),
