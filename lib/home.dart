@@ -31,7 +31,11 @@ class _HomeState extends State<Home> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
-                children: <Widget>[],
+                children: <Widget>[
+                  Container(
+                    child: const Icon(FontAwesome.palette, size: 20, color: gold),
+                  ),
+                ],
               ),
             ),
           ],
