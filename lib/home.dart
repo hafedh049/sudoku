@@ -67,7 +67,10 @@ class _HomeState extends State<Home> {
                             itemBuilder: (BuildContext context, int index) => Center(child: Text(_levels[index])),
                           ),
                         ),
-                        const Arrow(arrow: FontAwesome.chevron_right),
+                        Arrow(
+                          arrow: FontAwesome.chevron_right,
+                          callback: () {},
+                        ),
                       ],
                     ),
                   ),
