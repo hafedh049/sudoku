@@ -15,9 +15,9 @@ class _ArrowState extends State<Arrow> {
     return PrettyWaveButton(
       onPressed: () {},
       borderRadius : 50,
-   backgroundColor  :tra,
-  double verticalPadding = s14,
-  double horizontalPadding = s42,
+   backgroundColor  :transparent,
+   verticalPadding : 8,
+  horizontalPadding : 8,
   Duration duration = duration1000,
   Curve curve = Curves.easeInOut,
   double waveLength = s6,
