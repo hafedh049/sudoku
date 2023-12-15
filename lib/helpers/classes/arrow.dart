@@ -12,7 +12,10 @@ class _ArrowState extends State<Arrow> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onLongPressDown: (details) {},
+      onLongPressDown: (details) {}
+      onLongPressUp: () {
+
+      },
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(border: Border.all(width: .5, color: null), shape: BoxShape.circle),
