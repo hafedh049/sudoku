@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:icons_plus/icons_plus.dart';
 import 'package:pretty_animated_buttons/widgets/pretty_wave_button.dart';
 
 class Arrow extends StatefulWidget {
@@ -12,6 +11,6 @@ class Arrow extends StatefulWidget {
 class _ArrowState extends State<Arrow> {
   @override
   Widget build(BuildContext context) {
-    return const PrettyWaveButton(onPressed: () {}, child: Icon(widget.arrow));
+    return const PrettyWaveButton(onPressed: () {}, child: Icon(widget.arrow, size: 15, color: white));
   }
 }
