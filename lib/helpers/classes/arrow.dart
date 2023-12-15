@@ -15,7 +15,7 @@ class _ArrowState extends State<Arrow> {
       onLongPressDown: (details) {},
       onLongPressUp: () {},
       onTapUp: (details) {},
-      onTapDown: ,
+      onTapDown: (details) {},
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(border: Border.all(width: .5, color: null), shape: BoxShape.circle),
