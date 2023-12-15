@@ -29,9 +29,11 @@ class _HomeState extends State<Home> {
             ),
             Center(
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
                 children: <Widget>[],
               ),
-            )
+            ),
           ],
         ),
       ),
