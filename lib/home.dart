@@ -70,7 +70,9 @@ class _HomeState extends State<Home> {
                                     _(() => _hideLeftArrow = true);
                                   } else {
                                     _levelsController.nextPage(duration: 300.ms, curve: Curves.bounceIn);
-                                    if(){ _(() => _hideLeftArrow = true);}
+                                    if (_hideLeftArrow) {
+                                      _(() => _hideLeftArrow = false);
+                                    }
                                   }
                                 },
                               ),
