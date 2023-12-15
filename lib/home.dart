@@ -37,6 +37,7 @@ class _HomeState extends State<Home> {
                     padding: const EdgeInsets.all(16),
                     child: const Icon(FontAwesome.hashtag, size: 64, color: dark),
                   ),
+                  const SizedBox(height: 30),
                 ],
               ),
             ),
