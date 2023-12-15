@@ -38,7 +38,7 @@ class _ArrowState extends State<Arrow> {
         setState(() => _borderState = true);
       },
       child: AnimatedContainer(
-        duration: 300.ms,
+        duration: 500.ms,
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(border: Border.all(width: 1, color: _borderState ? gold : transparent), shape: BoxShape.circle, color: _colorState ? gold : transparent),
         child: Icon(widget.arrow, size: 15, color: _borderState ? dark : white),
