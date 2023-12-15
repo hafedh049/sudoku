@@ -18,6 +18,9 @@ class _HomeState extends State<Home> {
   bool _hideLeftArrow = true;
   bool _hideRightArrow = false;
 
+  final GlobalKey<State> _leftArrowKey = GlobalKey<State>();
+  final GlobalKey<State> _leftArrowKey = GlobalKey<State>();
+
   @override
   void dispose() {
     _levelsController.dispose();
@@ -83,7 +86,7 @@ class _HomeState extends State<Home> {
                           child: PageView.builder(
                             controller: _levelsController,
                             onPageChanged: (index) {
-                              setState(() {
+                              (() {
                                 _hideLeftArrow = index == 0;
                                 _hideRightArrow = index == 4; // Assuming there are 5 pages (0 to 4)
                               });
