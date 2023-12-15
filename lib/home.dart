@@ -15,9 +15,6 @@ class _HomeState extends State<Home> {
   final List<String> _levels = <String>["Beginner", "Easy", "Medium", "Hard", "Extreme"];
   final PageController _levelsController = PageController();
 
-  final GlobalKey<State> _leftArrowKey = GlobalKey<State>();
-  final GlobalKey<State> _rightArrowKey = GlobalKey<State>();
-
   @override
   void dispose() {
     _levelsController.dispose();
@@ -59,7 +56,6 @@ class _HomeState extends State<Home> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         StatefulBuilder(
-                          key: _leftArrowKey,
                           builder: (BuildContext context, void Function(void Function()) _) {
                             return Arrow(
                               arrow: FontAwesome.chevron_left,
@@ -82,7 +78,6 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         StatefulBuilder(
-                          key: _rightArrowKey,
                           builder: (BuildContext context, void Function(void Function()) _) {
                             return Arrow(
                               arrow: FontAwesome.chevron_right,
