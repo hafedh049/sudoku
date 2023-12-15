@@ -60,14 +60,18 @@ class _HomeState extends State<Home> {
                       children: <Widget>[
                         StatefulBuilder(
                           builder: (BuildContext context, void Function(void Function()) _) {
-                            return Arrow(
-                              arrow: FontAwesome.chevron_left,
-                              callback: () {
-                                if (_levelsController.page!.toInt() == 0) {
-                                } else {
-                                  _levelsController.nextPage(duration: 300.ms, curve: Curves.bounceIn);
-                                }
-                              },
+                            return AnimatedOpacity(
+                              duration: 300.ms,
+                              opacity: _hideLeftArrow ? 1 : 0,
+                              child: Arrow(
+                                arrow: FontAwesome.chevron_left,
+                                callback: () {
+                                  if (_levelsController.page!.toInt() == 0) {
+                                  } else {
+                                    _levelsController.nextPage(duration: 300.ms, curve: Curves.bounceIn);
+                                  }
+                                },
+                              ),
                             );
                           },
                         ),
