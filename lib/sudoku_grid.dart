@@ -44,7 +44,12 @@ class _SudokuGridState extends State<SudokuGrid> {
                                       Container(
                                         padding: const EdgeInsets.all(8),
                                         decoration: const BoxDecoration(shape: BoxShape.circle, color: gray),
-                                        child: Center(child: Text(_grid[rowIndex][columnIndex].toString())),
+                                        child: Center(
+                                          child: Text(
+                                            _grid[rowIndex][columnIndex].toString(),
+                                            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                                          ),
+                                        ),
                                       ),
                                       const SizedBox(width: 5),
                                       Container(width: 1, height: 20, color: gray),
