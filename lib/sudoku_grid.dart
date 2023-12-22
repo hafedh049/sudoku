@@ -9,9 +9,9 @@ class SudokuGrid extends StatefulWidget {
 }
 
 class _SudokuGridState extends State<SudokuGrid> {
-  final SudokuGenerator _sudoku = SudokuGenerator(emptySquares: 24);
+  final SudokuGenerator _sudoku = SudokuGenerator(emptySquares: 18);
 
-  final List<List<int>> _grid = []; // Sudoku.generate(Level.easy).puzzle;
+  final List<List<int>> _grid = <List<int>>[];
 
   @override
   void initState() {
@@ -21,6 +21,7 @@ class _SudokuGridState extends State<SudokuGrid> {
 
   @override
   Widget build(BuildContext context) {
+    print(_grid);
     return Scaffold(
       body: Column(
         children: <Widget>[
