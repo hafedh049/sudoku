@@ -42,7 +42,7 @@ class _SudokuGridState extends State<SudokuGrid> {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Center(
-          child: Column(
+          child: Row(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               for (int columnIndex = 0; columnIndex < _grid.length; columnIndex += 1)
@@ -55,7 +55,16 @@ class _SudokuGridState extends State<SudokuGrid> {
                             ],
                           )
                         : Column(
-                            children: <Widget>[for (int rowIndex = 0; rowIndex < 17; rowIndex += 1)],
+                            children: <Widget>[
+                              for (int rowIndex = 0; rowIndex < 17; rowIndex += 1)
+                                _grid[rowIndex][columnIndex] == 0
+                                    ? const SizedBox(width: 20, height: 20)
+                                    : Container(
+                                        padding: const EdgeInsets.all(8),
+                                        decoration: const BoxDecoration(shape: BoxShape.circle, color: gray),
+                                        child: Center(child: Text(_grid[rowIndex][columnIndex].toString())),
+                                      ),
+                            ],
                           ),
             ],
           ),
