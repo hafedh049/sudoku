@@ -17,7 +17,10 @@ class _SudokuGridState extends State<SudokuGrid> {
   @override
   void initState() {
     for (int i = 0; i < 9; i++) {
-      for (int j = 0; j < 9; j++) {}
+      for (int j = 1; j < 9; j += 2) {
+        _grid[i].insert(j, -1);
+      }
+      print(_grid);
     }
     //_grid.addAll(_sudoku.newSudoku);
     super.initState();
@@ -25,7 +28,6 @@ class _SudokuGridState extends State<SudokuGrid> {
 
   @override
   Widget build(BuildContext context) {
-    print(_grid);
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -33,7 +35,7 @@ class _SudokuGridState extends State<SudokuGrid> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              for (int rowIndex = 1; rowIndex <= 9; rowIndex += 1)
+              /*for (int rowIndex = 1; rowIndex <= 9; rowIndex += 1)
                 Flexible(
                   child: Row(
                     children: <Widget>[
@@ -75,7 +77,7 @@ class _SudokuGridState extends State<SudokuGrid> {
                             : Expanded(child: Container(width: 20, height: 20)),
                     ],
                   ),
-                ),
+                ),*/
             ],
           ),
         ),
