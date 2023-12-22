@@ -68,8 +68,32 @@ class Sudoku {
     return false;
   }
 
-  void generate() {
-    // Code to generate a Sudoku puzzle
-    // Implement your own logic to generate a puzzle
+  bool generate() {
+    return _fillGrid(0, 0);
+  }
+
+  bool _fillGrid(int row, int col) {
+    if (row == 9) {
+      // All rows filled (base case for recursion)
+      return true;
+    }
+
+    var nextRow = col == 8 ? row + 1 : row;
+    var nextCol = (col + 1) % 9;
+
+    var numbers = List.generate(9, (index) => index + 1)..shuffle(); // Randomize numbers for each row
+
+    for (var num in numbers) {
+      if (isSafe(row, col, num)) {
+        grid[row][col] = num;
+
+        if (_fillGrid(nextRow, nextCol)) {
+          return true;
+        }
+
+        grid[row][col] = 0; // Backtrack if the current arrangement is not correct
+      }
+    }
+    return false;
   }
 }
