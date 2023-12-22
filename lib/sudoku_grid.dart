@@ -54,7 +54,9 @@ class _SudokuGridState extends State<SudokuGrid> {
                               for (int rowIndex = 0; rowIndex < 17; rowIndex += 1) const Flexible(child: Divider(thickness: 1, height: 1, color: gray, indent: 5, endIndent: 5)),
                             ],
                           )
-                        : Container(),
+                        : Column(
+                            children: <Widget>[for (int rowIndex = 0; rowIndex < 17; rowIndex += 1)],
+                          ),
             ],
           ),
         ),
