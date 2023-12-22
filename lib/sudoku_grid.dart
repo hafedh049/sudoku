@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sudoku/helpers/utils.dart';
 import 'package:sudoku_solver_generator/sudoku_solver_generator.dart';
 
 class SudokuGrid extends StatefulWidget {
@@ -29,7 +30,12 @@ class _SudokuGridState extends State<SudokuGrid> {
             Flexible(
               child: Row(
                 children: <Widget>[
-                  for (int itemIndex = 0; itemIndex < 9; itemIndex += 1) Container(),
+                  for (int columnIndex = 0; columnIndex < 9; columnIndex += 1)
+                    _grid[rowIndex][columnIndex] != 0
+                        ? Container(
+                            decoration: const BoxDecoration(shape: BoxShape.circle, color: gray),
+                          )
+                        : Container(),
                 ],
               ),
             ),
