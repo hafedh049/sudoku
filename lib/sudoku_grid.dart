@@ -60,13 +60,17 @@ class _SudokuGridState extends State<SudokuGrid> {
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
                           for (int rowIndex = 0; rowIndex < 17; rowIndex += 1)
-                            _grid[rowIndex][columnIndex] == 0
-                                ? const SizedBox(width: 20, height: 20)
-                                : Container(
-                                    padding: const EdgeInsets.all(8),
-                                    decoration: const BoxDecoration(shape: BoxShape.circle, color: gray),
-                                    child: Center(child: Text(_grid[rowIndex][columnIndex].toString())),
-                                  ),
+                            _grid[rowIndex][columnIndex] == -1
+                                ? Container(width: 20, height: 1, color: gray)
+                                : _grid[rowIndex][columnIndex] == -2
+                                    ? Container(height: 1, width: 20, color: Colors.yellow)
+                                    : _grid[rowIndex][columnIndex] == 0
+                                        ? const SizedBox(width: 20, height: 20)
+                                        : Container(
+                                            padding: const EdgeInsets.all(8),
+                                            decoration: const BoxDecoration(shape: BoxShape.circle, color: gray),
+                                            child: Center(child: Text(_grid[rowIndex][columnIndex].toString())),
+                                          ),
                         ],
                       ),
             ],
