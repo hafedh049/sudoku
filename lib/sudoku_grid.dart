@@ -9,22 +9,19 @@ class SudokuGrid extends StatefulWidget {
 }
 
 class _SudokuGridState extends State<SudokuGrid> {
-  final List<String> _items = List<String>.generate(10, (int index) => index.toString())..addAll(const <String>["cell_separator", "empty_cell"]);
-  final List<String> _grid = List.generate(17 * 17, (int index) => "");
+  final List<int> _grid = Sudoku.generate(Level.easy).puzzle;
 
   @override
   void initState() {
     for (int index = 0; index < 17 * 17; index += 1) {
-      if (index == 5 || index == 11) {
-        _grid[index] = "column_separator";
-      }
+      if (index == 5 || index == 11) {}
     }
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    print(Sudoku.generate(Level.easy).puzzle);
+    print(_grid);
     return Scaffold(
       body: Row(
         children: <Widget>[
