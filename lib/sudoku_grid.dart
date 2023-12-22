@@ -44,30 +44,27 @@ class _SudokuGridState extends State<SudokuGrid> {
         padding: const EdgeInsets.all(8.0),
         child: Center(
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               for (int columnIndex = 0; columnIndex < _grid.length; columnIndex += 1)
                 columnIndex % 2 != 0
                     ? _grid[columnIndex][0] == -2
-                        ? Column(mainAxisSize: MainAxisSize.min, children: <Widget>[Container(width: 2, height: 500, color: Colors.yellow)])
+                        ? Column(mainAxisSize: MainAxisSize.min, children: <Widget>[Container(width: 2, height: 200, color: Colors.yellow)])
                         : Column(mainAxisSize: MainAxisSize.min, children: <Widget>[for (int rowIndex = 0; rowIndex < 17; rowIndex += 1) Container(width: 1, height: 20, color: gray)])
-                    : Expanded(
+                    : Flexible(
                         child: Column(
                           children: <Widget>[
                             for (int rowIndex = 0; rowIndex < 17; rowIndex += 1)
                               _grid[rowIndex][columnIndex] == -1
-                                  ? Expanded(child: Container(width: 20, height: 1, color: gray))
+                                  ? Container(width: 20, height: 1, color: gray)
                                   : _grid[rowIndex][columnIndex] == -2
-                                      ? Expanded(child: Container(height: 1, width: 20, color: Colors.yellow))
+                                      ? Container(height: 1, width: 20, color: Colors.yellow)
                                       : _grid[rowIndex][columnIndex] == 0
                                           ? const SizedBox()
-                                          : Expanded(
-                                              child: Container(
-                                                padding: const EdgeInsets.all(8),
-                                                decoration: const BoxDecoration(shape: BoxShape.circle, color: gray),
-                                                child: Center(child: Text(_grid[rowIndex][columnIndex].toString(), style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500))),
-                                              ),
+                                          : Container(
+                                              padding: const EdgeInsets.all(8),
+                                              decoration: const BoxDecoration(shape: BoxShape.circle, color: gray),
+                                              child: Center(child: Text(_grid[rowIndex][columnIndex].toString(), style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500))),
                                             ),
                           ],
                         ),
