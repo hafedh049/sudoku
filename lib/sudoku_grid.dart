@@ -51,7 +51,7 @@ class _SudokuGridState extends State<SudokuGrid> {
                     : _grid[columnIndex].every((int element) => element == -1)
                         ? Column(
                             children: <Widget>[
-                              Container(width: 2, height: 20, color: gray),
+                              for (int rowIndex = 0; rowIndex < 17; rowIndex += 1) const Flexible(child: Divider(thickness: 1, height: 1, color: gray, indent: 5, endIndent: 5)),
                             ],
                           )
                         : Container(),
