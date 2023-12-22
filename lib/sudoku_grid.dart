@@ -13,7 +13,9 @@ class _SudokuGridState extends State<SudokuGrid> {
 
   @override
   void initState() {
+    for(int index = 0; index < 17*17 ; index+=1){
 
+    }
     super.initState();
   }
 
