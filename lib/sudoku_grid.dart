@@ -29,7 +29,7 @@ class _SudokuGridState extends State<SudokuGrid> {
 
     for (int i = 1; i < _grid.length; i += 2) {
       k += 1;
-      _grid.insert(i, [k == 3 || k == 6 ? -2 : -1]);
+      _grid.insert(i, k == 3 || k == 6 ? [for (int _ = 0; _ < 17; _++) -2] : [for (int _ = 0; _ < 17; _++) -1]);
     }
     print(_grid);
 
