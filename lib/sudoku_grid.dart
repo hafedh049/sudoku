@@ -33,9 +33,17 @@ class _SudokuGridState extends State<SudokuGrid> {
                   for (int columnIndex = 0; columnIndex < 9; columnIndex += 1)
                     _grid[rowIndex][columnIndex] != 0
                         ? Container(
+                            width: 40,
+                            height: 40,
                             decoration: const BoxDecoration(shape: BoxShape.circle, color: gray),
+                            child: Text(_grid[rowIndex][columnIndex].toString()),
                           )
-                        : Container(),
+                        : Container(
+                            width: 40,
+                            height: 40,
+                            decoration: const BoxDecoration(shape: BoxShape.circle, color: gray),
+                            child: Text(_grid[rowIndex][columnIndex].toString()),
+                          ),
                 ],
               ),
             ),
