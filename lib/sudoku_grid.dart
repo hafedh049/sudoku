@@ -21,15 +21,14 @@ class _SudokuGridState extends State<SudokuGrid> {
 
   @override
   Widget build(BuildContext context) {
-    print(_grid);
     return Scaffold(
       body: Column(
         children: <Widget>[
-          for (int columnIndex = 0; columnIndex < 17; columnIndex += 1)
+          for (int rowIndex = 0; rowIndex < 9; rowIndex += 1)
             Flexible(
               child: Row(
                 children: <Widget>[
-                  for (int itemIndex = 0; itemIndex < 17; itemIndex += 1) Container(),
+                  for (int itemIndex = 0; itemIndex < 9; itemIndex += 1) Container(),
                 ],
               ),
             ),
