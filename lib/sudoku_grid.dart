@@ -17,6 +17,9 @@ class _SudokuGridState extends State<SudokuGrid> {
       if(index == 5 || index == 11){
         _grid[index] ="column_separator" ;
       }
+      else if (){
+
+      }
     }
     super.initState();
   }
