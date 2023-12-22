@@ -44,6 +44,7 @@ class _SudokuGridState extends State<SudokuGrid> {
         padding: const EdgeInsets.all(8.0),
         child: Center(
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               for (int columnIndex = 0; columnIndex < _grid.length; columnIndex += 1)
