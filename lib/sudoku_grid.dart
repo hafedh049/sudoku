@@ -45,7 +45,11 @@ class _SudokuGridState extends State<SudokuGrid> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              for (int rowIndex = 0; rowIndex < _grid.length; rowIndex += 1) Container(),
+              for (int columnIndex = 0; columnIndex < _grid.length; columnIndex += 1)
+                Column(
+                  children: <Widget>[for (int rowIndex = 0; rowIndex < _grid[rowIndex].length; rowIndex += 1)
+             , ],
+                ),
             ],
           ),
         ),
