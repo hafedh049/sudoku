@@ -50,8 +50,8 @@ class _SudokuGridState extends State<SudokuGrid> {
                                       Container(width: 1, height: 20, color: gray),
                                     ],
                                   ),
-                                  const SizedBox(width: 5),
-                                  Container(width: 1, height: 20, color: gray),
+                                  const SizedBox(height: 5),
+                                  Container(width: 20, height: 1, color: gray),
                                 ],
                               ),
                             )
