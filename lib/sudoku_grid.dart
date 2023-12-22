@@ -49,14 +49,9 @@ class _SudokuGridState extends State<SudokuGrid> {
             children: <Widget>[
               for (int columnIndex = 0; columnIndex < _grid.length; columnIndex += 1)
                 columnIndex % 2 != 0
-                    ? _grid[columnIndex][0] == -1
-                        ? Column(mainAxisSize: MainAxisSize.min, children: <Widget>[Container(width: 2, color: Colors.yellow)])
-                        : Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              for (int rowIndex = 0; rowIndex < 17; rowIndex += 1) Container(width: 1, height: 20, color: gray),
-                            ],
-                          )
+                    ? _grid[columnIndex][0] == -2
+                        ? Column(mainAxisSize: MainAxisSize.min, children: <Widget>[Container(width: 2, height: 500, color: Colors.yellow)])
+                        : Column(mainAxisSize: MainAxisSize.min, children: <Widget>[for (int rowIndex = 0; rowIndex < 17; rowIndex += 1) Container(width: 1, height: 20, color: gray)])
                     : Column(
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
