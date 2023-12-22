@@ -17,15 +17,16 @@ class _SudokuGridState extends State<SudokuGrid> {
   @override
   void initState() {
     _grid.addAll(_sudoku.newSudoku);
-
+    int k = 0;
     for (int i = 0; i < _grid.length; i++) {
       for (int j = 1; j < _grid[i].length; j += 2) {
         _grid[i].insert(j, -1);
+        k += 1;
       }
     }
-    for (int i = 1; i < _grid.length; i+= 2) {
-        _grid[i].insert(i, -1);
-     }
+    for (int i = 1; i < _grid.length; i += 2) {
+      _grid.insert(i, [-1]);
+    }
     print(_grid);
 
     super.initState();
@@ -40,7 +41,7 @@ class _SudokuGridState extends State<SudokuGrid> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-             for(int rowIndex = 0;)
+              for (int rowIndex = 0; rowIndex < _grid.length; rowIndex += 1) Container(),
             ],
           ),
         ),
