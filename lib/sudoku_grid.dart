@@ -44,16 +44,17 @@ class _SudokuGridState extends State<SudokuGrid> {
         padding: const EdgeInsets.all(8.0),
         child: Center(
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               for (int columnIndex = 0; columnIndex < _grid.length; columnIndex += 1)
                 columnIndex % 2 != 0
-                    ? _grid[columnIndex].every((int element) => element == -2)
-                        ? Column(mainAxisSize: MainAxisSize.min, children: <Widget>[Flexible(child: Container(width: 2, color: Colors.yellow))])
+                    ? _grid[columnIndex][0] == -1
+                        ? Column(mainAxisSize: MainAxisSize.min, children: <Widget>[Container(width: 2, color: Colors.yellow)])
                         : Column(
                             mainAxisSize: MainAxisSize.min,
                             children: <Widget>[
-                              for (int rowIndex = 0; rowIndex < 17; rowIndex += 1) Flexible(child: Container(width: 1, height: 20, color: gray)),
+                              for (int rowIndex = 0; rowIndex < 17; rowIndex += 1) Container(width: 1, height: 20, color: gray),
                             ],
                           )
                     : Column(
