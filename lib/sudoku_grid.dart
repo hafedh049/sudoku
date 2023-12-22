@@ -22,32 +22,33 @@ class _SudokuGridState extends State<SudokuGrid> {
 
   @override
   Widget build(BuildContext context) {
-    print(_grid);
     return Scaffold(
-      body: Column(
-        children: <Widget>[
-          for (int rowIndex = 0; rowIndex < 9; rowIndex += 1)
-            Flexible(
-              child: Row(
-                children: <Widget>[
-                  for (int columnIndex = 0; columnIndex < 9; columnIndex += 1)
-                    _grid[rowIndex][columnIndex] != 0
-                        ? Container(
-                            width: 40,
-                            height: 40,
-                            decoration: const BoxDecoration(shape: BoxShape.circle, color: gray),
-                            child: Text(_grid[rowIndex][columnIndex].toString()),
-                          )
-                        : Container(
-                            width: 40,
-                            height: 40,
-                            decoration: const BoxDecoration(shape: BoxShape.circle, color: gray),
-                            child: Text(_grid[rowIndex][columnIndex].toString()),
-                          ),
-                ],
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: <Widget>[
+            for (int rowIndex = 0; rowIndex < 9; rowIndex += 1)
+              Flexible(
+                child: Row(
+                  children: <Widget>[
+                    for (int columnIndex = 0; columnIndex < 9; columnIndex += 1)
+                      _grid[rowIndex][columnIndex] != 0
+                          ? Container(
+                              width: 40,
+                              height: 40,
+                              decoration: const BoxDecoration(shape: BoxShape.circle, color: gray),
+                              child: Center(child: Text(_grid[rowIndex][columnIndex].toString())),
+                            )
+                          : Container(
+                              width: 40,
+                              height: 40,
+                              decoration: const BoxDecoration(shape: BoxShape.circle, color: gray),
+                            ),
+                  ],
+                ),
               ),
-            ),
-        ],
+          ],
+        ),
       ),
     );
   }
