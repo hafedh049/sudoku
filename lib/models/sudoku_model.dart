@@ -30,7 +30,7 @@ class Sudoku {
     return true;
   }
 
-  bool solveSudoku() {
+  bool solve() {
     int row = -1;
     int col = -1;
     bool isEmpty = true;
@@ -57,7 +57,7 @@ class Sudoku {
       if (isSafe(row, col, num)) {
         grid[row][col] = num;
 
-        if (solveSudoku()) {
+        if (solve()) {
           return true;
         }
 
@@ -68,29 +68,8 @@ class Sudoku {
     return false;
   }
 
-  bool solve() {
-    if (solveSudoku()) {
-      printGrid();
-      return true;
-    } else {
-      print("No solution exists");
-      return false;
-    }
-  }
-
-  void printGrid() {
-    for (int i = 0; i < n; i++) {
-      print(grid[i]);
-    }
-  }
-
   void generate() {
     // Code to generate a Sudoku puzzle
     // Implement your own logic to generate a puzzle
   }
-}
-
-void main() {
-  Sudoku sudoku = Sudoku();
-  sudoku.solve();
 }
