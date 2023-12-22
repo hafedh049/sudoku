@@ -16,7 +16,10 @@ class _SudokuGridState extends State<SudokuGrid> {
 
   @override
   void initState() {
-    _grid.addAll(_sudoku.newSudoku);
+    for (int i = 0; i < 9; i++) {
+      for (int j = 0; j < 9; j++) {}
+    }
+    //_grid.addAll(_sudoku.newSudoku);
     super.initState();
   }
 
