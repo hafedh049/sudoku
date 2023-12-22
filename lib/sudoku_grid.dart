@@ -24,11 +24,12 @@ class _SudokuGridState extends State<SudokuGrid> {
         _grid[i].insert(j, k == 3 || k == 6 ? -2 : -1);
       }
     }
+
     k = 0;
 
     for (int i = 1; i < _grid.length; i += 2) {
       k += 1;
-      _grid.insert(i, [k == 3 || k == 7 ? -2 : -1]);
+      _grid.insert(i, [k == 3 || k == 6 ? -2 : -1]);
     }
     print(_grid);
 
