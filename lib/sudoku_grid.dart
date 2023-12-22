@@ -61,13 +61,15 @@ class _SudokuGridState extends State<SudokuGrid> {
                                                 : Container(width: 2, height: 45, color: Colors.yellow),
                                       ],
                                     ),
-                                    Container(width: 20, height: 1, color: gray),
+                                    rowIndex == 9
+                                        ? const SizedBox()
+                                        : columnIndex % 3 != 0
+                                            ? Container(width: 20, height: 1, color: gray)
+                                            : Container(width: 45, height: 1, color: Colors.yellow),
                                   ],
                                 ),
                               )
-                            : Expanded(
-                                child: Container(width: 20, height: 20),
-                              ),
+                            : Expanded(child: Container(width: 20, height: 20)),
                     ],
                   ),
                 ),
