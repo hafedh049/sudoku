@@ -47,10 +47,10 @@ class _SudokuGridState extends State<SudokuGrid> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               for (int columnIndex = 0; columnIndex < _grid.length; columnIndex += 1)
-                _grid[columnIndex].every((int element) => element == -2)
+                columnIndex % 2 == 0
                     ? Column(mainAxisSize: MainAxisSize.min, children: <Widget>[Flexible(child: Container(width: 2, color: Colors.yellow))])
-                    : _grid[columnIndex].every((int element) => element == -1)
-                        ? Column(
+                    :
+                         Column(
                             mainAxisSize: MainAxisSize.min,
                             children: <Widget>[
                               for (int rowIndex = 0; rowIndex < 17; rowIndex += 1) const Flexible(child: Divider(thickness: 1, height: 1, color: gray, indent: 5, endIndent: 5)),
