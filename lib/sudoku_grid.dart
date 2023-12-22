@@ -50,11 +50,10 @@ class _SudokuGridState extends State<SudokuGrid> {
               for (int columnIndex = 0; columnIndex < _grid.length; columnIndex += 1)
                 columnIndex % 2 != 0
                     ? _grid[columnIndex][0] == -2
-                        ? Expanded(child: Column(mainAxisSize: MainAxisSize.min, children: <Widget>[Container(width: 2, height: 500, color: Colors.yellow)]))
-                        : Expanded(child: Column(mainAxisSize: MainAxisSize.min, children: <Widget>[for (int rowIndex = 0; rowIndex < 17; rowIndex += 1) Container(width: 1, height: 20, color: gray)]))
+                        ? Column(mainAxisSize: MainAxisSize.min, children: <Widget>[Container(width: 2, height: 500, color: Colors.yellow)])
+                        : Column(mainAxisSize: MainAxisSize.min, children: <Widget>[for (int rowIndex = 0; rowIndex < 17; rowIndex += 1) Container(width: 1, height: 20, color: gray)])
                     : Expanded(
                         child: Column(
-                          mainAxisSize: MainAxisSize.min,
                           children: <Widget>[
                             for (int rowIndex = 0; rowIndex < 17; rowIndex += 1)
                               _grid[rowIndex][columnIndex] == -1
@@ -62,12 +61,12 @@ class _SudokuGridState extends State<SudokuGrid> {
                                   : _grid[rowIndex][columnIndex] == -2
                                       ? Expanded(child: Container(height: 1, width: 20, color: Colors.yellow))
                                       : _grid[rowIndex][columnIndex] == 0
-                                          ? Expanded(child: const SizedBox(width: 40, height: 20))
+                                          ? const SizedBox()
                                           : Expanded(
                                               child: Container(
                                                 padding: const EdgeInsets.all(8),
                                                 decoration: const BoxDecoration(shape: BoxShape.circle, color: gray),
-                                                child: Center(child: Text(_grid[rowIndex][columnIndex].toString())),
+                                                child: Center(child: Text(_grid[rowIndex][columnIndex].toString(), style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500))),
                                               ),
                                             ),
                           ],
