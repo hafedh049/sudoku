@@ -8,17 +8,14 @@ class SudokuGrid extends StatefulWidget {
 }
 
 class _SudokuGridState extends State<SudokuGrid> {
-  final List<String> _items = List<String>.generate(10, (int index) => index.toString())..addAll(const <String>["cell_separator","empty_cell"]);
-  final List<String> _grid = List.generate(17*17, (int index) => "");
+  final List<String> _items = List<String>.generate(10, (int index) => index.toString())..addAll(const <String>["cell_separator", "empty_cell"]);
+  final List<String> _grid = List.generate(17 * 17, (int index) => "");
 
   @override
   void initState() {
-    for(int index = 0; index < 17*17 ; index+=1){
-      if(index == 5 || index == 11){
-        _grid[index] ="column_separator" ;
-      }
-      else if (){
-
+    for (int index = 0; index < 17 * 17; index += 1) {
+      if (index == 5 || index == 11) {
+        _grid[index] = "column_separator";
       }
     }
     super.initState();
@@ -32,7 +29,8 @@ class _SudokuGridState extends State<SudokuGrid> {
           for (int columnIndex = 0; columnIndex < 17; columnIndex += 1)
             Flexible(
               child: Column(
-                children: <Widget>[for (int itemIndex = 0 ; itemIndex < 17 ; itemIndex +=1)
+                children: <Widget>[
+                  for (int itemIndex = 0; itemIndex < 17; itemIndex += 1) Container(),
                 ],
               ),
             ),
