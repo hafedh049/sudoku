@@ -22,6 +22,7 @@ class _SudokuGridState extends State<SudokuGrid> {
 
   @override
   Widget build(BuildContext context) {
+    print(_grid);
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(8.0),
