@@ -31,19 +31,20 @@ class _SudokuGridState extends State<SudokuGrid> {
       k += 1;
       _grid.insert(i, k == 3 || k == 6 ? [for (int _ = 0; _ < 17; _++) -2] : [for (int _ = 0; _ < 17; _++) -1]);
     }
-    print(_grid);
 
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
+    print(_grid);
+
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Center(
           child: Row(
-            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               for (int columnIndex = 0; columnIndex < _grid.length; columnIndex += 1)
                 _grid[columnIndex].every((int element) => element == -2)
