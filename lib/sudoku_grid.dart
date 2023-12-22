@@ -16,10 +16,7 @@ class _SudokuGridState extends State<SudokuGrid> {
 
   @override
   void initState() {
-    for (int rowIndex = 0; rowIndex < 9; rowIndex += 1) {
-      _grid.add(<int>[]);
-    }
-
+    _grid.addAll(_sudoku.newSudoku);
     super.initState();
   }
 
