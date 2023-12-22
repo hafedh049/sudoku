@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sudoku_dart/sudoku_dart.dart';
 
 class SudokuGrid extends StatefulWidget {
   const SudokuGrid({super.key});
@@ -23,6 +24,7 @@ class _SudokuGridState extends State<SudokuGrid> {
 
   @override
   Widget build(BuildContext context) {
+    print(Sudoku.generate(Level.easy).puzzle);
     return Scaffold(
       body: Row(
         children: <Widget>[
